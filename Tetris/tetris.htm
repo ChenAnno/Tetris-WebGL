@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>挑战项目1--俄罗斯方块</title>
+<script id="vertex-shader" type="x-shader/x-vertex">
+	attribute vec4 vPosition;
+	void main()
+	{
+		gl_Position = vPosition;
+	}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	uniform vec4 vColor;
+	void main()
+	{
+		gl_FragColor = vColor;
+	}
+</script>
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="tetris.js"></script>
+
+<body>
+	<font size="3" color="darkslateblue">A:左移  D:右移  S:加速  P:暂停  回车:变形</font>
+	<br />
+	<font size="3" color="teal">当前得分 </font>
+	&nbsp;
+	<span id="showScore"></span>
+	<!-- To show the score -->
+	<br />
+	<canvas id="gl-canvas" width="360" height="600">
+		Oops ... your browser doesn't support the HTML5 canvas element
+	</canvas>
+	<br />
+	<font size="3" color="chocolate">Produced by Yanzhe Chen </font>
+</body>
+
+
+</html>
